@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: rgb(134, 5, 5);
+    
+}
+
+h1 {
+    padding: 20px;
+    font-weight: bold;
+}
+
+h3{ 
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 500px;
+}
+h4 { 
+    background-color: rgb(226, 218, 218);
+    padding: 10px;
+
+}
+body{
+    background-color: pink;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.img-container {
+    margin: 5px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.ghia-image {
+    object-fit: contain;
+    border-radius: 10px;
+    max-width: 100%;
+    display: block;
+    height: 500px;
+    margin: auto;
+}
+.caption{
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.life-header{
+    padding: 30px;
+    text-align: center; 
+    font-weight: bold;
+}
+
+.life  {
+    margin: 10px auto;
+    padding: 30px 70px;
+    max-width: 600px;
+    text-align: left;    
+}
+
+
+.date  {
+    font-weight: bold;
+} 
+
+li{
+    margin: 20px;
+}
+
+.quote {
+    font-style: italic;
+    margin: 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+.quote-author {
+    text-indent: 50%;
+    margin: 5px;
+    padding: 0%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+a{
+    color: red;
+    padding: 2px;
+    border-radius: 5px;
+
+}
+
