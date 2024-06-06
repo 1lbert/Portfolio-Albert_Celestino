@@ -303,6 +303,35 @@ span .name  {
     font-size: 1rem;
 }
 
+
+form { 
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 1rem;
+}
+
+form input, form textarea { 
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    color: white;
+    border: 1px solid var(--button);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+form .btn:hover { 
+    color: var(--button);
+    border: 1px solid var(--white);
+    background-color: white;
+    font-weight: bold;
+}
+
 #social-medias {
     display: flex;
     justify-content: center;
