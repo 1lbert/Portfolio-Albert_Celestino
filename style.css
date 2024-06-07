@@ -139,14 +139,14 @@
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--text);
     cursor:default;
     background-color: transparent;
     
 }
 h1:hover {
-    font-size: 4rem;
+    font-size: 5rem;
     transition: 0.8s ease-in;
 }
 
@@ -176,12 +176,15 @@ h1:hover {
 
 #about_me p { 
     font: 5em;
+    text-align: justify;
 }
 
 p .text {
-    align-items: center;
+    /* align-items: left; */
     color: var(--paragraph);
-    font-stretch: condensed;
+    text-align: justify;
+    width: 100%;
+    /* outline: 1px solid red; */
 }
 
 span .name  {
@@ -265,6 +268,16 @@ span .name  {
     background-color: transparent;
 }
 
+.show-all svg { 
+    /* outline: 1px solid red; */
+    margin-bottom: 0;
+    height: 0.6rem;
+    width: auto ;
+    fill: var(--paragraph);
+}
+
+
+
 #Projects .project-tile:hover span{
     opacity: 100%;
     transition: opacity 0.25s ease-in;
@@ -278,11 +291,17 @@ span .name  {
     text-align: center;
 }
 
-.show-all:hover{
+.show-all:hover {
     color: var(--text);
     transition: 0.1s ease-out;
     font-size: 20px;
 }
+/* .show-all svg:hover { 
+    height: 1rem;
+    width: auto ;
+    fill: white;
+} */
+
 
 /* ------------------------ Reach me ------------------------ */
 #Reach_me{
@@ -296,11 +315,13 @@ span .name  {
 .reach-me-header h2 {
     font-size: min(3rem,4rem);
     color: var(--text);
+    padding-bottom: 1rem;
 }
 .reach-me-header p {
     color: var(--paragraph);
     font-style: italic;
     font-size: 1rem;
+    margin: 0 1rem;
 }
 
 
@@ -325,11 +346,16 @@ form input, form textarea {
     font-weight: bold;
 }
 
-form .btn:hover { 
+form .btn { 
     color: var(--button);
     border: 1px solid var(--white);
     background-color: white;
     font-weight: bold;
+}
+
+form .btn:hover { 
+    transition: all 0.3s ease-in-out;
+    transform: translate(0, 5px);
 }
 
 #social-medias {
@@ -339,6 +365,7 @@ form .btn:hover {
     width: 100%;
     font-size: 1rem;
     gap: 1rem;
+    margin-bottom: 5rem;
 
 }
 
@@ -358,6 +385,10 @@ form .btn:hover {
     text-align: center;
     align-items: center;
     transform: translateY(10px);
+}
+
+svg { 
+    padding-right: 0.5rem;
 }
 
 footer{
