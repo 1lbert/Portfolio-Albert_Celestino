@@ -26,8 +26,24 @@
     position: fixed;
     width: 100%;
     border-bottom: 2px solid var(--button);
-    /* width: 100%; */
-    /* outline: 1px solid red; */
+}
+
+.logo-container {
+    position: absolute;
+    left: 4rem;
+    /* top: 1rem; */
+}
+
+.logo-container a {
+    display: flex;
+    justify-content: center;
+
+}
+
+.logo-container img { 
+    /* border-radius: 5px; */
+    width: auto;
+    height: 30px;
 }
 
 
@@ -38,7 +54,6 @@
     align-items: center;
     padding: 1rem 0;
     margin: 0 2rem;
-    /* width: 100%; */
     gap: 2em;
 }
 
@@ -95,7 +110,7 @@
 }
 
 
-@media (max-width: 520px) { 
+@media (max-width: 600px) { 
     
     .menu-icon { 
         display: block;
@@ -105,6 +120,10 @@
 
     .nav-menu .nav-link { 
         display: none;
+    }
+
+    .logo-container {
+        left: 1rem;
     }
 }
 
