@@ -1,0 +1,289 @@
+:root {
+    --background: #242629;
+    --button: #815cf0;
+    --red-orange: #FD4F01;
+    --text:#fffffe;
+    --paragraph: #94a1b2;
+    --cardbackground: #16161a;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    scroll-behavior: auto;
+    background-color: var(--background);
+    box-sizing: border-box;
+
+}
+
+/* ------------------------ NAV BAR ------------------------ */
+
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid var(--red-orange);
+    z-index: 999;
+}
+
+.logo-container {
+    position: absolute;
+    left: 4rem;
+    /* top: 1rem; */
+}
+
+.logo-container a {
+    display: flex;
+    justify-content: center;
+
+}
+
+.logo-container img { 
+    /* border-radius: 5px; */
+    width: auto;
+    height: 30px;
+}
+
+
+#navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 0 2rem;
+    gap: 2em;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 1rem 0;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--red-orange);
+    transition: 0.3s ease-in;
+    border-bottom: 2px solid var(--red-orange);
+}
+
+#navbar .nav-menu-mobile { 
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    background-color: rgba(36, 38, 41, 0.562);
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-menu-mobile li { 
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    padding: 1rem;
+}
+.nav-menu-mobile a { 
+    background-color: transparent;
+}
+
+
+.menu-icon { 
+    display: none;
+}
+
+.close-icon {
+    float: right;
+    margin-right: 1rem;
+}
+
+
+@media (max-width: 750px) { 
+    
+    .menu-icon { 
+        display: block;
+        cursor: pointer;
+        /* padding: 1rem; */
+    }
+
+    .nav-menu .nav-link { 
+        display: none;
+    }
+
+    .logo-container {
+        left: 1rem;
+    }
+}
+
+
+
+/* ----------------------- Main CSS-------------------- */
+
+body { 
+    background-color: var(--cardbackground);
+    min-height: 100vh;
+}
+
+main { 
+    margin-top: 3rem;
+    padding-top: 1rem;
+    /* min-height: 100vh; */
+    width: 90%;
+    margin-inline: auto;
+    background-color: transparent;
+}
+
+
+main .main-title { 
+  text-align: center;
+  margin-inline: auto;
+  padding: 1rem;
+  border-bottom: 1px solid var(--red-orange);
+  background-color: transparent;
+  width: max-content;
+
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+  
+.tag-list li {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+.scoller { 
+  z-index: 2;
+  background-color: transparent;
+}
+  
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--cardbackground);
+}
+
+
+main .title { 
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--red-orange);
+  background-color: transparent;
+  width: max-content;
+}
+
+.card__container { 
+  background-color: transparent;
+
+}
+.card__article{ 
+  background-color: transparent;
+
+}
+.card__img { 
+  background-color: transparent;
+
+} 
+.card__data {
+  background-color: transparent;
+
+}
+.card__title {
+  background-color: transparent;
+
+}
+.card__description { 
+  background-color: transparent;
+
+}
+.card__button { 
+  background-color: transparent;
+
+}
+
+.single-page-section{ 
+  background-color: transparent;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------Scoller Animation-------------------- */
+
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    /* -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 10%,
+      white 90%,
+      transparent
+    ); */
+    
+    /* mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent); */
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 20s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 90s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+/* -----------------------Scoller Animation-------------------- */
+  
