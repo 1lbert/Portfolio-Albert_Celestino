@@ -214,7 +214,11 @@ span .name  {
 }
 
 /* ------------------------ Projects  ------------------------ */
-
+.main-section .header { 
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--red-orange);
+}
 
 .container { 
     display: flex;
@@ -233,7 +237,7 @@ span .name  {
     outline: 1px solid var(--red-orange);
     padding: 1rem;
     padding-bottom: 2rem;
-    width: 300px;
+    width: 280px;
     border-radius: 0.5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.404);
 }
@@ -364,15 +368,16 @@ text-decoration: underline;
   
   .scroller[data-animated="true"] {
     overflow: hidden;
-    -webkit-mask: linear-gradient(
+    width: 85%;
+    /* -webkit-mask: linear-gradient(
       90deg,
       transparent,
       white 10%,
       white 90%,
       transparent
-    );
+    ); */
     
-    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    /* mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent); */
   }
   
   .scroller[data-animated="true"] .scroller__inner {
@@ -527,6 +532,10 @@ footer{
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+footer span { 
+  background-color: var(--cardbackground);
 
 }
 footer p { 

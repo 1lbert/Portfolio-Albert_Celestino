@@ -1,0 +1,52 @@
+:root {
+    --background: #242629;
+    --button: #815cf0;
+    --text:#fffffe;
+    --paragraph: #94a1b2;
+    --cardbackground: #16161a;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    color: var(--text);
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    scroll-behavior: auto;
+    background-color: var(--background);
+}
+
+
+.thank-you-page {
+    min-height: 100vh;
+    color: var(--text);
+    background-color: var(--cardbackground);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+}
+
+svg { 
+    position: relative;
+    margin-bottom: 1rem;
+    height: auto;
+    width: 5rem;
+    background-color: transparent;
+}
+
+.thank-you-page p { 
+    color: var(--paragraph);
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+.thank-you-page h1 {
+    font-size: 5rem;
+    color: var(--text);
+    cursor:default;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+
