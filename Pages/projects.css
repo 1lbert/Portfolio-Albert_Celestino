@@ -153,7 +153,7 @@ main .main-title {
   text-align: center;
   margin-inline: auto;
   padding: 1rem;
-  border-bottom: 1px solid var(--red-orange);
+  border-bottom: 1px solid white;
   background-color: transparent;
   width: max-content;
 }
@@ -167,7 +167,7 @@ main .main-title {
 .tag-list li {
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+  box-shadow: 0 0.5rem 1rem -0.25rem black;
 }
 
 .scoller { 
@@ -187,48 +187,171 @@ main .main-title {
 main .title { 
   padding: 0.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--red-orange);
+  border-bottom: 1px solid white;
   background-color: transparent;
   width: max-content;
 }
 
-.card__container { 
-  background-color: transparent;
-
-}
-.card__article{ 
-  background-color: transparent;
-
-}
-.card__img { 
-  background-color: transparent;
-
-} 
-.card__data {
-  background-color: transparent;
-
-}
-.card__title {
-  background-color: transparent;
-
-}
-.card__description { 
-  background-color: transparent;
-
-}
-.card__button { 
-  background-color: transparent;
+.all-projects { 
+  background-color: var(--cardbackground);
 
 }
 
-.single-page-section{ 
+.single-page-section, .landing-page-section, .websites-section, .my-apps-section, .practice-section  { 
   background-color: transparent;
+  padding: 1rem 0;
   
 }
 
+.container { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: auto;
+  /* margin-top: 1rem; */
+  background-color: transparent;
+  max-width: 85%;
+}
+
+.card__container { 
+  border: 1px solid var(--red-orange);
+  padding: 1rem;
+  padding-bottom: 2rem;
+  width: 280px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem black;
+  background-color: transparent;
+}
+
+
+.card__article { 
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.card__data { 
+  position: absolute;
+  /* width: 80%; */
+  background-color: var(--cardbackground);
+  margin-inline: auto;
+  padding: 1rem 2rem;
+  /* border-radius: 1rem; */
+  right: 0;
+  bottom: -9rem;
+  left: 0;
+  opacity: 0;
+  transform: opacity 1s 1s;
+}
+
+.card__img { 
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+
+.card__description, .card__title { 
+  display: block;
+  margin-bottom: 0.25rem;
+  background-color: transparent;
+}
+
+
+.card__button {
+  color: var(--red-orange);
+  background-color: transparent;
+}
+
+.card__button:hover {
+text-decoration: underline;
+}
+
+
+footer{
+  border-top: 2px solid var(--red-orange);
+  background-color: var(--cardbackground);
+  color: var(--white);
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+footer span { 
+background-color: var(--cardbackground);
+
+}
+footer p { 
+  background-color: transparent;
+}
 
 
 
+
+/* ==================== Card Hover Animation =============================== */
+
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
 
 
 
